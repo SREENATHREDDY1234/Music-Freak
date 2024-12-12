@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="shortcut icon" href="./icons/bx-music.svg" type="image/x-icon">
+    <title>Login</title>
+</head>
+<body>
+    <div class="bg-container">
+        <div class="wrapper bg-center">
+            <div class="content">
+                <h1>Hello,<br>Music Freakers</h1>
+                <p><i class='bx bxs-music'></i>     Let the music move you...</p>
+            </div>
+            <div class="login-container">
+                <h2>LOGIN</h2>
+                <div></div>
+                <button class="btn btn-light"><img src="./assets/google.png" alt="">Login With Google</button>
+                <div class="or-line-container"><div class="or-line"></div><p>or</p><div class="or-line"></div></div>
+                <input type="text" placeholder="Enter Username" class="input-box">
+                <input type="password" placeholder="******" required class="input-box">
+                <button class="btn btn-dark btn-login">Log in</button>
+                <div class="line"></div>
+                <p>I don't have a account</p>
+                <button class="btn btn-dark btn-signup" onclick="display()">Sign up</button>
+                <div>
+                    <input type="checkbox" id="check-box">
+                    <label for="check-box" class="terms-text">I have read all the terms and conditions</label>
+                </div>
+            </div>
+            <div class="signup-container display-none">
+                <h2>SIGN UP</h2>
+                <div></div>
+                <button class="btn btn-light"><img src="./assets/google.png" alt="">Continue With Google</button>
+                <div class="or-line-container">
+                    <div class="or-line"></div>
+                    <p>or</p>
+                    <div class="or-line"></div>
+                </div>
+                <input type="text" placeholder="Email address" class="input-box">
+                <input type="text" placeholder="Username" class="input-box">
+                <input type="password" placeholder="******" required class="input-box">
+                <button class="btn btn-dark btn-signup-1">Sign Up</button>
+                <div class="line"></div>
+                <p>already have an account?</p>
+                <button class="btn btn-dark btn-login-1" onclick = "display()">LOGIN</button>
+                <div>
+                    <input type="checkbox" id="check-box">
+                    <label for="check-box" class="terms-text">I have read all the terms and conditions</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let login = document.querySelector(".login-container");
+        let signup = document.querySelector(".signup-container");
+        let signup_login_button = document.querySelectorAll(".btn-login-1");
+        let signup_button = document.querySelectorAll(".btn-signup");
+        function display(){
+            login.classList.toggle("display-none");
+            signup.classList.toggle("display-none");
+        }
+    </script>
+</body>
+</html>
